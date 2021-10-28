@@ -1,0 +1,131 @@
+body{
+    background-image: url(background.png);
+    margin: 0;
+    font-size: 8pt;
+    font-family: verdana, tahoma, sans-serif;
+    overflow: auto;
+}
+
+#topBannerBg{
+    background-image: url(bannerbg.png);
+    text-align: center;
+}
+
+#bannerCenter{
+    display: inline-block;
+}
+
+h1{
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: tahoma, verdana, sans-serif;
+    text-shadow: 3px 3px #999999;
+}
+
+.center{
+    text-align: center;
+}
+
+#bodyDiv{
+    position: relative;
+    border: 4px solid gray;
+    border-radius: 20px;
+    width: 800px;
+    margin: auto;
+    overflow: auto;
+    height: 100%;
+}
+
+.rottenBanner{
+    background-image: url(rbg.png);
+    border-top-left-radius: 20px;
+    font-size: 48pt;
+    color: red;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.rightSide{
+    display: block;
+    float: right;
+    width: 250px;
+    background-color: #A2B964;
+}
+.leftSide{
+    display: block;
+    width: 550px;
+    overflow: auto;
+    height: 100%;
+}
+
+#bottomRightSide{
+    padding-left: 10pt;
+    padding-right: 10pt;
+    font-size: 8pt;
+    font-family: Arial, sans-serif;
+}
+
+dt{
+    font-weight: bold;
+}
+dd{
+    padding-bottom: 10pt;
+}
+li{
+    list-style-type: none;
+    text-indent: -40px;
+}
+.topRightBorder{
+    border-top-right-radius: 20px;
+}
+.topleftBorder{
+    border-top-left-radius: 20px;
+    vertical-align: text-bottom;
+}
+
+.colomnLeft{
+    width: 47%;
+    margin: 2%;
+}
+
+#parent {
+    margin: 0;
+    width: 100%;
+}
+.left {
+    float: left;
+    width: 47%;
+    margin: 2%;
+}
+.right {
+    overflow: auto;
+    width: 47%;
+}
+
+.commentBox{
+    background-color: #E8DC9B;
+    font-size: 8pt;
+    font-weight: bold;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 8px;
+    overflow: auto;
+}
+
+.imgWrapper{
+    padding: 5px;
+    float: left;
+}
+
+.reviewer{
+    vertical-align: text-bottom;
+}
+
+.page{
+    position: absolute;
+    bottom: 0;
+    background-color: #A2B964;
+    text-align: center;
+    width: 100%;
+    
+}
