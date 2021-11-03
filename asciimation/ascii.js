@@ -1,5 +1,5 @@
 (function () {
-    "use strict"
+    "use strict";
 
     window.onload = function () {
         document.getElementById("animations").onchange = animaitonPage;
@@ -7,7 +7,7 @@
         document.getElementById("start").onclick = startAnimation;
         document.getElementById("stop").onclick = stopAnimation;
         document.getElementById("turbo").onchange = animationSpeed;
-    }
+    };
 
     function animaitonPage() {
         let choice = document.getElementById("animations");
@@ -88,7 +88,6 @@
         document.getElementById("stop").disabled = false;
         document.getElementById("start").disabled = true;
         document.getElementById("animations").disabled = true;
-        // clearInterval(x);
         x = setInterval(animate, animationSpeed());
     }
 
