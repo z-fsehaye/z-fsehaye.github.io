@@ -1,5 +1,7 @@
-window.onload = function(){
-    document.getElementById("createAccount").onclick = createAccount.openAccount;
+"use strict";
+window.onload = function () {
+  document.getElementById("timer").onclick = rudyTimer.timerPlay;
+  document.getElementById("createAccount").onclick = createAccount.openAccount;
 };
 var accounInfoList = [];
 var createAccount = (function () {
@@ -27,3 +29,23 @@ class Account {
     this.deposit = deposit;
   }
 }
+
+var rudyTimer = (function () {
+  let timer = null;
+  let rudy = function () {
+      document.getElementById("output").innerText += "Rudy!";
+  };
+  function delayMsg2() {
+      if (timer == null) {
+          timer = setInterval(rudy, 1000);
+      } else {
+          clearInterval(timer);
+          timer = null;
+      }
+  }
+  return {
+      timerPlay: function () {
+          delayMsg2();
+      },
+  };
+})();
