@@ -1,14 +1,15 @@
+
 "use strict";
 $(document).ready(function () {
 
-    var count = 0;
-    var arr = []; 
-    var EMPTY_SQUARE = {};
-    EMPTY_SQUARE.leftx = "300px";
+    var count = 0;//count variable for left and right positioning
+    var arr = []; //array used for storing the filled position for shuffling
+    var EMPTY_SQUARE = {};//Object which stores and updates the empty div let and top
+    EMPTY_SQUARE.leftx = "300px";//initial left and top positions respectively
     EMPTY_SQUARE.toppx = "300px";
 
 
-
+//function for setting the position and css for the filled squares
     $('#puzzlearea div').each(function ()
     {
         var filledSquares = {};
@@ -24,7 +25,7 @@ $(document).ready(function () {
         count++;
     });
 
-
+//this function checks if the square can be moved, and swaps the value for emptysquare
     $('.puzzlepiece').click(function ()
     {
 
@@ -45,7 +46,7 @@ $(document).ready(function () {
 
     });
 
-
+//shuffle algorithm, this changes the index of the divs stored as objects in the array
     $('#shufflebutton').click(function () {
 
 
@@ -59,19 +60,19 @@ $(document).ready(function () {
         }
         
 
-        
+        //setting the css from the shuffled array
         $('#puzzlearea div').each(function ()
         {
             $(this).css({"left": arr[suff].leftpx, "top": arr[suff].toppx});
             suff++;
         });
         suff = 0;
-        
+        //updating to the initial value for the emptydiv
         EMPTY_SQUARE.leftx = "300px";
         EMPTY_SQUARE.toppx = "300px";
     });
 
-    
+    //on hover function for changing the css and removing the css
     $('.puzzlepiece').hover(function ()
     {
 
@@ -92,7 +93,7 @@ $(document).ready(function () {
         $(this).removeClass('movablepiece');
     });
 
-    
+    //helper function for finding the neighbouring elements on the left
     var clickableleft = function (changedleft, changedtop)
     {
         if (parseInt(changedtop) === parseInt(EMPTY_SQUARE.toppx))
@@ -108,12 +109,11 @@ $(document).ready(function () {
         }
     };
 
-    
+    //helper function for finding the neighbouring elements on the right
     var clickableTop = function (changedleft, changedtop)
     {
         if (parseInt(changedleft) === parseInt(EMPTY_SQUARE.leftx))
         {
-            
             if (parseInt(changedtop) + 100 === parseInt(EMPTY_SQUARE.toppx) || parseInt(changedtop) - 100 === parseInt(EMPTY_SQUARE.toppx))
             {
 
